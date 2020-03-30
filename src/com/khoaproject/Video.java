@@ -6,26 +6,27 @@ public class Video {
     private User user;
     //set variables in constructor but keep setMethods to update later
 
+    public Video(String fileName, String title, User user) {
+        this.fileName = fileName;
+        this.title = title;
+        this.user = user;
+    }
+
     public String getFileName() {
         return fileName;
     }
-
     public void setFileName(String fileName) {
         this.fileName = fileName;
     }
-
     public String getTitle() {
         return title;
     }
-
     public void setTitle(String title) {
         this.title = title;
     }
-
     public User getUser() {
         return user;
     }
-
     public void setUser(User user) {
         this.user = user;
     }

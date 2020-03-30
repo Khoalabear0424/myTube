@@ -1,14 +1,21 @@
 package com.khoaproject;
 
 public class VideoProcessor {
+    private Encodable encoder;
+    private Storable database;
+    private Sendable emailService;
+
+    public VideoProcessor(VideoEncoder encoder, VideoDatabase database, EmailService emailService) {
+        this.encoder = encoder;
+        this.database = database;
+        this.emailService = emailService;
+    }
+
     public void process(Video video) {
-        var encoder = new VideoEncoder();
+        //class should not be responsible for instantiating Video classes
+        //encode and store methods should be in an interface
         encoder.encode(video);
-
-        var database = new VideoDatabase();
         database.store(video);
-
-        var emailService = new EmailService();
         emailService.sendEmail(video.getUser());
     }
 }
