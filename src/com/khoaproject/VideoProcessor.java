@@ -1,9 +1,9 @@
 package com.khoaproject;
 
 public class VideoProcessor {
-    private Encodable encoder;
-    private Storable database;
-    private Sendable emailService;
+    private VideoEncoder encoder;
+    private VideoDatabase database;
+    private NotificationService emailService;
 
     public VideoProcessor(VideoEncoder encoder, VideoDatabase database, EmailService emailService) {
         this.encoder = encoder;

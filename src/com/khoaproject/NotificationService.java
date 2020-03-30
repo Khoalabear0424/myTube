@@ -1,5 +1,5 @@
 package com.khoaproject;
 
-public interface Sendable {
+public interface NotificationService {
     void sendEmail(User user);
 }

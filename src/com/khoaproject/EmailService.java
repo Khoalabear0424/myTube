@@ -1,6 +1,6 @@
 package com.khoaproject;
 
-public class EmailService implements Sendable {
+public class EmailService implements NotificationService {
     @Override
     public void sendEmail(User user) {
         System.out.println("Notifying " + user.getEmail() + "...");
